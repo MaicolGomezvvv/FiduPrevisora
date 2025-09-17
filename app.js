@@ -14,7 +14,7 @@ if (require.main === module) {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 
     // Ejecutar cada día a las 08:00 AM
-    cron.schedule("0 8 * * *", async () => {
+    cron.schedule("1 4 * * *", async () => {
       console.log("⏰ Ejecutando tarea programada de reportes (3 usuarios)");
 
       const usuarios = [
@@ -31,6 +31,7 @@ if (require.main === module) {
         }
       }
     });
+    console.log("✅ Tarea programada configurada para las 08:00 AM cada día");
   });
 }
 
